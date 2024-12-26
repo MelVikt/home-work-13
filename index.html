@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+  <header class="bg-success text-white py-3">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+          <img src="images/logo.png" alt="Norozetka Logo" class="logo"> Norozetka
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Перемикач навігації">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Головна</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Про нас</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Каталог товарів
+              </a>
+              <ul class="dropdown-menu bg-success border-0" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item text-white" href="#">Електроніка</a></li>
+                <li><a class="dropdown-item text-white" href="#">Одяг</a></li>
+                <li><a class="dropdown-item text-white" href="#">Книги</a></li>
+                <li><a class="dropdown-item text-white" href="#">Іграшки</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Контакти</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mt-4"> 
+    <div class="row">
+      <div class="col-lg-3 col-md-4 col-12">
+        <div id="carouselex" class="carousel" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/chair.jpg" class="d-block w-100" alt="The chair">
+            </div>
+            <div class="carousel-item">
+              <img src="images/wardrobe.jpg" class="d-block w-100" alt="The wardrobe">
+            </div>
+            <div class="carousel-item">
+              <img src="images/personal_computer.jpg" class="d-block w-100" alt="The personal computer">
+            </div>
+            <div class="carousel-item">
+              <img src="images/sausage.jpg" class="d-block w-100" alt="The sausage">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselex" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Попередній</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselex" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Наступний</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-8 col-12">
+        <div class="accordion" id="accordionex">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingstart">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsestart" aria-expanded="false" aria-controls="collapsestart">
+                Розділ 1: Новинки товарів
+              </button>
+            </h2>
+            <div id="collapsestart" class="accordion-collapse collapse" aria-labelledby="headingstart" data-bs-parent="#accordionex">
+              <div class="accordion-body">
+                Незабаром буде оновлення!
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingmiddle">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsemiddle" aria-expanded="false" aria-controls="collapsemiddle">
+                Розділ 2: Популярні товари
+              </button>
+            </h2>
+            <div id="collapsemiddle" class="accordion-collapse collapse" aria-labelledby="headingmiddle" data-bs-parent="#accordionex">
+              <div class="accordion-body">
+                Незабаром буде оновлення!
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingfinish">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefinish" aria-expanded="false" aria-controls="collapsefinish">
+                Розділ 3: Акції та знижки
+              </button>
+            </h2>
+            <div id="collapsefinish" class="accordion-collapse collapse" aria-labelledby="headingfinish" data-bs-parent="#accordionex">
+              <div class="accordion-body">
+                Незабаром буде оновлення!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 d-lg-block">
+        <div class="bg-light p-3">
+          <h5>Зворотній зв'язок</h5>
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Ім'я</label>
+              <input type="text" class="form-control" id="name" placeholder="Введіть ваше ім'я">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Введіть ваш email">
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Телефон</label>
+              <input type="tel" class="form-control" id="phone" placeholder="Введіть ваш телефон">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Повідомлення</label>
+              <textarea class="form-control" id="message" rows="3" placeholder="Напишіть ваше повідомлення"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label">Тема</label>
+              <select class="form-select" id="subject">
+                <option>Виберіть тему</option>
+                <option>Питання</option>
+                <option>Коментар</option>
+                <option>Пропозиція</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-info">Відправити</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-success text-white text-center py-4 mt-5">
+    <p>&copy; 2024 Інтернет-магазин 'Norozetka'. Всі права захищені.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
